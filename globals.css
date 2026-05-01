@@ -90,6 +90,42 @@ ol {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--foreground);
+}
+
+h1 {
+  font-size: clamp(3rem, 9vw, 6rem);
+  line-height: 0.95;
+  max-width: 11ch;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.05;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
 .card {
   background-color: var(--card);
   color: var(--card-foreground);
@@ -155,8 +191,6 @@ ol {
   width: min(100% - 2rem, 1200px);
   margin-inline: auto;
 }
-
-/* NAVBAR */
 
 .site-header {
   width: 100%;
@@ -368,6 +402,68 @@ ol {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.hero {
+  padding: 4rem 0;
+}
+
+.hero__inner {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 620px;
+}
+
+.hero__eyebrow {
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.85rem;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hero__text {
+  max-width: 560px;
+  margin-top: 1.25rem;
+  color: var(--muted-foreground);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.hero__actions {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero__visual {
+  position: relative;
+  padding: 0.75rem;
+  background-color: var(--card);
+}
+
+.hero__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.hero__card {
+  margin-top: 1rem;
+  background-color: var(--background);
+}
+
+.hero__card p {
+  margin-top: 0.5rem;
+  color: var(--muted-foreground);
+}
+
 @media (min-width: 768px) {
   .nav-mobile {
     display: none;
@@ -375,5 +471,23 @@ ol {
 
   .nav-desktop {
     display: block;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr 0.9fr;
+  }
+
+  .hero__card {
+    position: absolute;
+    left: -1.5rem;
+    bottom: 1.5rem;
+    width: min(320px, calc(100% - 2rem));
+    margin-top: 0;
   }
 }
