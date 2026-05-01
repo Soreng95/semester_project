@@ -491,3 +491,87 @@ h5 {
     margin-top: 0;
   }
 }
+
+/* EXPLORE */
+.explore {
+  padding: 4rem 0;
+}
+
+.explore__header {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.explore__header h2 {
+  margin-top: 0.25rem;
+}
+
+.explore__intro {
+  max-width: 620px;
+  margin-top: 1rem;
+  color: var(--muted-foreground);
+  font-size: 1.1rem;
+}
+
+.explore__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.explore-card {
+  padding: 0.75rem;
+  overflow: hidden;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-0.35rem);
+  box-shadow: var(--shadow-lg);
+}
+
+.explore-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.explore-card__content {
+  padding: 1rem 0.25rem 0.25rem;
+}
+
+.explore-card__label {
+  width: fit-content;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.explore-card__content h3 {
+  margin-top: 0.25rem;
+}
+
+.explore-card__content p:not(.explore-card__label) {
+  margin-top: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.explore-card__content .btn {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 800px) {
+  .explore {
+    padding: 5rem 0;
+  }
+
+  .explore__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
