@@ -15,34 +15,54 @@
 
   <body>
     <header class="site-header">
-      <nav class="nav-mobile">
+      <nav class="nav-mobile" aria-label="Mobile navigation">
         <input type="checkbox" id="nav-toggle" class="nav-mobile__toggle" />
 
         <div class="nav-mobile__top">
-          <a href="#" class="logo">LOGO</a>
+          <a href="index.html" class="nav-mobile__logo">LOGO</a>
 
-          <label for="nav-toggle" class="nav-mobile__btn">
-            <span></span>
-            <span></span>
-            <span></span>
+          <label
+            for="nav-toggle"
+            class="nav-mobile__btn"
+            aria-label="Toggle menu"
+          >
+            <span class="nav-mobile__bar"></span>
+            <span class="nav-mobile__bar"></span>
+            <span class="nav-mobile__bar"></span>
           </label>
         </div>
 
-        <div class="nav-mobile__menu">
-          <a class="nav-link nav-link--active" href="#">Home</a>
-          <a class="nav-link" href="#">Exhibitions</a>
-          <a class="nav-link" href="#">Visit</a>
-          <a class="nav-link" href="#">Events</a>
-          <a class="nav-link" href="#">Contact</a>
+        <div class="nav-mobile__overlay">
+          <div class="nav-mobile__panel">
+            <div class="nav-mobile__panel-inner">
+              <div class="nav-mobile__links">
+                <a
+                  class="nav-mobile__link nav-mobile__link--active"
+                  href="index.html"
+                  >Home</a
+                >
+                <a class="nav-mobile__link" href="#">Exhibitions</a>
+                <a class="nav-mobile__link" href="#">Visit</a>
+                <a class="nav-mobile__link" href="#">Events</a>
+                <a class="nav-mobile__link" href="#">Contact</a>
+              </div>
+            </div>
+          </div>
+
+          <label
+            class="nav-mobile__backdrop"
+            for="nav-toggle"
+            aria-label="Close menu"
+          ></label>
         </div>
       </nav>
 
-      <nav class="nav-desktop">
+      <nav class="nav-desktop" aria-label="Desktop navigation">
         <div class="nav-desktop__inner">
-          <a href="#" class="logo">LOGO</a>
+          <a href="index.html" class="nav-desktop__logo">LOGO</a>
 
           <div class="nav-desktop__links">
-            <a class="nav-link nav-link--active" href="#">Home</a>
+            <a class="nav-link nav-link--active" href="index.html">Home</a>
             <a class="nav-link" href="#">Exhibitions</a>
             <a class="nav-link" href="#">Visit</a>
             <a class="nav-link" href="#">Events</a>
