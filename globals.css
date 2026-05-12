@@ -223,6 +223,12 @@ h5 {
   white-space: nowrap;
 }
 
+.nav-desktop__logo img {
+  display: block;
+  height: 80px;
+  width: auto;
+}
+
 .nav-desktop__links {
   justify-self: center;
   display: flex;
@@ -278,6 +284,12 @@ h5 {
   text-transform: uppercase;
   color: var(--foreground);
   white-space: nowrap;
+}
+
+.nav-mobile__logo img {
+  display: block;
+  height: 64px;
+  width: auto;
 }
 
 .nav-mobile__btn {
@@ -435,6 +447,12 @@ h5 {
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.site-footer__logo img {
+  display: block;
+  height: 80px;
+  width: auto;
 }
 
 .site-footer__brand p {
